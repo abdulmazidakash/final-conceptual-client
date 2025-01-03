@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'
 
 const Card = ({plant}) => {
 
-  const {name, image, category, price, quantity, _id} = plant || {};
+  const {name, 
+    imageUrl, category, price, quantity, _id} = plant || {};
 
   return (
     <Link
@@ -28,7 +29,8 @@ const Card = ({plant}) => {
                 group-hover:scale-110 
                 transition
               '
-            src={image}
+            src={
+              imageUrl}
             alt='Plant Image'
           />
           <div

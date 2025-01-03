@@ -3,6 +3,7 @@ import Container from '../Shared/Container'
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
 import LoadingSpinner from '../Shared/LoadingSpinner'
+import { data } from 'autoprefixer'
 
 const Plants = () => {
 
@@ -13,6 +14,8 @@ const Plants = () => {
       return data;
     }
   } )
+
+  // console.log(plants);
 
   if(isLoading) return <LoadingSpinner></LoadingSpinner>
     return (
