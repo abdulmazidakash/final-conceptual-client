@@ -1,22 +1,37 @@
 import PropTypes from 'prop-types'
 import { useState } from 'react'
 import DeleteModal from '../../Modal/DeleteModal'
+import useAxiosSecure from '../../../hooks/useAxiosSecure'
+import toast from 'react-hot-toast'
 // eslint-disable-next-line react/prop-types
-const CustomerOrderDataRow = ({orderData}) => {
+const CustomerOrderDataRow = ({orderData, refetch}) => {
+
+  const axiosSecure = useAxiosSecure();
   let [isOpen, setIsOpen] = useState(false)
   const closeModal = () => setIsOpen(false)
 
   // eslint-disable-next-line react/prop-types
-  const { name, imageUrl, category, price, quantity, _id, status} = orderData ;
+  const { name, imageUrl, category, price, quantity, _id, plantId, status} = orderData ;
 
   //handle order delete or cancellation 
   const handleDelete = async () =>{
     try{
 
     //fetch delete request
-    
+    await axiosSecure.delete(`/orders/${_id}`)
+        //increase quantity from plant collection 
+        await axiosSecure.patch(`/plants/quantity/${plantId}`, {
+          quantityToUpdate: quantity,
+          status: 'increase',
+        })
+
+    //call refetch to refresh ui (fetch orders data again)
+    refetch()
+    toast.success('order cancelled');
+
     }catch(err){
       console.log(err);
+      toast.error(err.response.data)
     }
     finally{
       closeModal();
