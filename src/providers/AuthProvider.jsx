@@ -97,11 +97,14 @@ const AuthProvider = ({ children }) => {
           setUser(currentUser);
   
           // Save user info in DB
-          await axios.post(`${import.meta.env.VITE_API_URL}/users/${currentUser.email}`, {
-            name: currentUser.displayName,
-            image: currentUser.photoURL,
-            email: currentUser.email,
-          });
+          // if(currentUser?.displayName && currentUser?.photoURL){
+          //   console.log('ore baba');
+          //   await axios.post(`${import.meta.env.VITE_API_URL}/users/${currentUser.email}`, {
+          //     name: currentUser.displayName,
+          //     image: currentUser.photoURL,
+          //     email: currentUser.email,
+          //   });
+          // }
   
           // Get JWT token
           await axios.post(
