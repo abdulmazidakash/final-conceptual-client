@@ -56,7 +56,7 @@ export const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <SellerRoute>
-            <AddPlant />
+              <AddPlant />
             </SellerRoute>
           </PrivateRoute>
         ),
@@ -66,7 +66,7 @@ export const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <SellerRoute>
-            <MyInventory />
+              <MyInventory />
             </SellerRoute>
           </PrivateRoute>
         ),
@@ -76,7 +76,7 @@ export const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <AdminRoute>
-            <ManageUsers />
+              <ManageUsers />
             </AdminRoute>
           </PrivateRoute>
         ),
@@ -99,11 +99,13 @@ export const router = createBrowserRouter([
       },
       {
         path: 'manage-orders',
-        element: <PrivateRoute>
-          <SellerRoute>
-          <ManageOrders />
-          </SellerRoute>
-        </PrivateRoute>,
+        element: (
+          <PrivateRoute>
+            <SellerRoute>
+              <ManageOrders />
+            </SellerRoute>
+          </PrivateRoute>
+        ),
       },
     ],
   },
