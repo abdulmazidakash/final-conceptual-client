@@ -17,6 +17,16 @@ const SellerOrderDataRow = ({orderData, refetch}) => {
     console.log(newStatus);
 
     //patch request to server
+    try{
+      //update order status
+      await axiosSecure.patch(`/orders/${_id}`, { status: newStatus,})
+      //call refetch to refresh ui (fetch orders data again)
+      refetch()
+      toast.success('Status Updated')
+    } catch(err){
+      console.log(err);
+      toast.error(err.response.data);
+    }
 
   }
 
