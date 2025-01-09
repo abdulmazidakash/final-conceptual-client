@@ -9,20 +9,20 @@ Install my-project with npm
 |     ├── assets/
 |     ├── components/
 |     |		├── Dashboard/
-|     |		|		├── Sidebar/
-|     |		|		|		├── Menu/
-|     |		|		|		|	└── AdminMenu.jsx/
-|     |		|		|		|	└── CustomerMenu.jsx/
-|     |		|		|		|	└── MenuItem.jsx/
-|     |		|		|		|	└── SellerMenu.jsx/
-|     |		|		|		└── Sidebar.jsx/
-|     |		|		├── Statistics/
-|     |		|		|		└── AdminStatistics.jsx/
-|     |		|		├── TableRows/
-|     |		|		|		└── CustomerOrderDataRow.jsx/
-|     |		|		|		└── PlantDataRow.jsx/
-|     |		|		|		└── SellerOrderDataRow.jsx/
-|     |		|		|		└── UserDataRow.jsx/
+|     |		|	├── Sidebar/
+|     |		|	|	├── Menu/
+|     |		|	|	|	└── AdminMenu.jsx/
+|     |		|	|	|	└── CustomerMenu.jsx/
+|     |		|	|	|	└── MenuItem.jsx/
+|     |		|	|	|	└── SellerMenu.jsx/
+|     |		|	|	└── Sidebar.jsx/
+|     |		|	├── Statistics/
+|     |		|	|	└── AdminStatistics.jsx/
+|     |		|	├── TableRows/
+|     |		|	|	└── CustomerOrderDataRow.jsx/
+|     |		|	|	└── PlantDataRow.jsx/
+|     |		|	|	└── SellerOrderDataRow.jsx/
+|     |		|	|	└── UserDataRow.jsx/
 |     |		├── Form/
 |     |		|	└── AddPlantForm.jsx/
 |     |		|	└── UpdatePlantForm.jsx/
@@ -36,16 +36,16 @@ Install my-project with npm
 |     |		|	└── UpdatePlantModal.jsx/
 |     |		|	└── UpdateUserModal.jsx/
 |     |		├── Shared/
-|     |		|		├── Button/
-|     |		|		|	└── Button.jsx/
-|     |		|		├── Footer/
-|     |		|		|	└── Footer.jsx/
-|     |		|		├── Navbar/
-|     |		|		|	└── Navbar.jsx/
-|     |		|		└── Container.jsx/
-|     |		|		└── EmptyState.jsx/
-|     |		|		└── Heading.jsx/
-|     |		|		└── LoadingSpinner.jsx/
+|     |		|	├── Button/
+|     |		|	|	└── Button.jsx/
+|     |		|	├── Footer/
+|     |		|	|	└── Footer.jsx/
+|     |		|	├── Navbar/
+|     |		|	|	└── Navbar.jsx/
+|     |		|	└── Container.jsx/
+|     |		|	└── EmptyState.jsx/
+|     |		|	└── Heading.jsx/
+|     |		|	└── LoadingSpinner.jsx/
 |     ├── firebase/
 |     |		└── firebase.config.js/
 |     ├── hooks/
@@ -57,17 +57,17 @@ Install my-project with npm
 |     |		└── MainLayout.jsx/
 |     ├── pages/
 |     |		├── Dashboard/
-|     |		|		├── Admin/
-|     |		|		|	└── ManageUsers.jsx/
-|     |		|		├── Common/
-|     |		|		|		└── Profile.jsx/
-|     |		|		|		└── Statistics.jsx/
-|     |		|		├── Customer/
-|     |		|		|		└── MyOrders.jsx/
-|     |		|		├── Seller/
-|     |		|		|		└── AddPlant.jsx/
-|     |		|		|		└── ManageOrders.jsx/
-|     |		|		|		└── MyInventory.jsx/
+|     |		|	├── Admin/
+|     |		|	|	└── ManageUsers.jsx/
+|     |		|	├── Common/
+|     |		|	|	└── Profile.jsx/
+|     |		|	|	└── Statistics.jsx/
+|     |		|	├── Customer/
+|     |		|	|	└── MyOrders.jsx/
+|     |		|	├── Seller/
+|     |		|	|	└── AddPlant.jsx/
+|     |		|	|	└── ManageOrders.jsx/
+|     |		|	|	└── MyInventory.jsx/
 |     |		├── Home/
 |     |		|	└── Home.jsx/
 |     |		├── Login/
