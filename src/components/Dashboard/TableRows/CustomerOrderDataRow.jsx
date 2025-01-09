@@ -46,8 +46,7 @@ const CustomerOrderDataRow = ({orderData, refetch}) => {
             <div className='block relative'>
               <img
                 alt='profile'
-                src={
-                  imageUrl}
+                src={ imageUrl}
                 className='mx-auto object-cover rounded h-10 w-15 '
               />
             </div>
