@@ -4,6 +4,7 @@ import { BsFillCartPlusFill, BsFillHouseDoorFill } from 'react-icons/bs'
 import useAxiosSecure from '../../../hooks/useAxiosSecure'
 import { useQuery } from '@tanstack/react-query'
 import LoadingSpinner from '../../Shared/LoadingSpinner'
+import Chart from '../Charts/Chart'
 
 const AdminStatistics = () => {
 
@@ -19,7 +20,7 @@ const AdminStatistics = () => {
   })
 
   console.log(statData);
-  const { totalUser, totalPlants } = statData || {};
+  const { totalUser, totalPlants, totalOrder, totalRevenue, chartData } = statData || {};
 
   if(isLoading) return <LoadingSpinner/>
   return (
@@ -39,7 +40,7 @@ const AdminStatistics = () => {
                 Total Revenue
               </p>
               <h4 className='block antialiased tracking-normal font-sans text-2xl font-semibold leading-snug text-blue-gray-900'>
-                $120
+                ${totalRevenue}
               </h4>
             </div>
           </div>
@@ -55,7 +56,7 @@ const AdminStatistics = () => {
                 Total Orders
               </p>
               <h4 className='block antialiased tracking-normal font-sans text-2xl font-semibold leading-snug text-blue-gray-900'>
-                120
+                {totalOrder}
               </h4>
             </div>
           </div>
@@ -95,8 +96,10 @@ const AdminStatistics = () => {
 
         <div className='mb-4 grid grid-cols-1 gap-6 lg:grid-cols-2 xl:grid-cols-3'>
           {/*Sales Bar Chart */}
+         
           <div className='relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 shadow-md overflow-hidden xl:col-span-2'>
             {/* Chart goes here.. */}
+            {chartData && <Chart chartData={chartData} />}
           </div>
           {/* Calender */}
           <div className=' relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 shadow-md overflow-hidden'>
